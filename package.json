@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "remotion:preview": "remotion preview remotion/index.ts",
+    "remotion:render": "remotion render remotion/index.ts Demo --output out/demo.mp4"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
@@ -16,9 +18,12 @@
     "vite": "^8.0.1"
   },
   "dependencies": {
+    "@remotion/cli": "^4.0.443",
+    "@remotion/transitions": "^4.0.443",
     "@tailwindcss/vite": "^4.2.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "remotion": "^4.0.443",
     "tailwindcss": "^4.2.2"
   }
 }
