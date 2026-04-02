@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@source "../src/**/*.ts";
+
+@theme {
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Color picker — needs pseudo-element selectors */
+input[type="color"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 6px;
+}
+
+/* Canvas crossfade on generation */
+@keyframes canvas-in {
+  from { opacity: 0.4; }
+  to   { opacity: 1; }
+}
+.canvas-fresh {
+  animation: canvas-in 0.3s ease-out;
+}
+
+/* History slide-in */
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(-8px) scale(0.95); }
+  to   { opacity: 1; transform: translateX(0) scale(1); }
+}
+.history-enter {
+  animation: slide-in 0.25s ease-out;
+}
+
+/* Scrollbar for history rail */
+.history-rail::-webkit-scrollbar {
+  height: 4px;
+}
+.history-rail::-webkit-scrollbar-track {
+  background: transparent;
+}
+.history-rail::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+}
+.history-rail::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
