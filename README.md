@@ -4,7 +4,7 @@ Infinite gradient wallpaper generator. Pick two colors, choose a shape, adjust s
 
 **[Live Demo](https://kaminskypavel.github.io/gradient-gen/)**
 
-<https://github.com/kaminskypavel/gradient-gen/raw/master/demo.mp4>
+![demo](demo.gif)
 
 ## Shapes
 
